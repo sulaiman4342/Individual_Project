@@ -1,0 +1,168 @@
+﻿<Window x:Class="GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI" xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+
+    <Border Background="#EFF2F7">
+        <Grid >
+            <StackPanel  Orientation="Vertical" Background="MediumAquamarine">
+                <TextBlock Text="STUDENT REGISTRATION SYSTEM" Style="{StaticResource Titletext}" 
+                           Margin="-20 10 0 0" Width="430" Foreground="DarkGreen" />
+
+                <StackPanel Margin=" 110 20 0 0"  HorizontalAlignment="Left"   
+                            Background="Transparent" Orientation="Horizontal" Height="33" Width="508" >
+                    <TextBlock Text="First Name" Foreground="#FF4A4F51"  Style="{StaticResource ListView}" Width="118" />
+                    <TextBlock Text="Last Name" Foreground="#FF4A4F51"   Style="{StaticResource ListView}" Width="121" />
+                    <TextBlock Text="Age" Foreground="#FF4A4F51"  Style="{StaticResource ListView}"  Width="38" />
+                    <TextBlock Text="Date Of Birth"  Foreground="#FF4A4F51"  Style="{StaticResource ListView}" Width="90" />
+                    <TextBlock Text="GPA" Foreground="#FF4A4F51"  Style="{StaticResource ListView}" Width="46" />
+                </StackPanel>
+
+                <StackPanel>
+                <ListView Background="Transparent" ItemsSource="{Binding Students, UpdateSourceTrigger=PropertyChanged}"
+                          SelectedItem="{Binding SelectedStudent, UpdateSourceTrigger=PropertyChanged}"  Height="200">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Border>
+
+                                <StackPanel Orientation="Horizontal">
+                                    
+                                    <TextBlock Text="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource ListView}" Width="50"/>
+                                    <TextBlock Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource ListView}" Width="118"/>
+                                    <TextBlock Text="{Binding DateOfBirth, UpdateSourceTrigger=PropertyChanged}" Width="98" Style="{StaticResource ListView}"/>
+
+                                    <TextBlock Text="{Binding Age, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource ListView}"/>
+
+                                    <TextBlock Text="{Binding GPAValue, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource ListView}"/>
+                                </StackPanel>
+
+                            </Border>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackPanel>
+
+            
+
+                <StackPanel Height="142" Width="492" RenderTransformOrigin="0.5,0.5" Opacity="0.3" Margin="250 0 0 0">
+                    <StackPanel.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-36.616"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </StackPanel.RenderTransform>
+                    
+                </StackPanel>
+
+            </StackPanel>
+            <Canvas Opacity="0.5">
+
+                <Rectangle Width="172" Height="413" Fill="#008B8B" Canvas.Left="987" Canvas.Top="88" RenderTransformOrigin="0.183,0.489" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="120"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+
+
+
+                <Rectangle Width="158" Height="518" Fill="#008B8B" Canvas.Left="613" Canvas.Top="348" RenderTransformOrigin="0.183,0.489" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="120"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+
+                <Ellipse Width="157" Height="126" Fill="#008B8B" RenderTransformOrigin="1.103,-0.158" Canvas.Top="656" Canvas.Left="238" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="120"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
+                <Ellipse Width="168" Height="126" Fill="#008B8B" RenderTransformOrigin="1.103,-0.158" Canvas.Top="383" Canvas.Left="645" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="120"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
+                <Rectangle Width="204" Height="732" Fill="#008B8B" Canvas.Left="294" Canvas.Top="-221" RenderTransformOrigin="0.183,0.489" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="120"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+                <Ellipse Width="204" Height="126" Fill="#008B8B" RenderTransformOrigin="1.103,-0.158" Canvas.Top="541" Canvas.Left="396" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleY="0.098"/>
+                            <RotateTransform Angle="120"/>
+                            <TranslateTransform X="-0.284" Y="-0.164"/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
+
+            </Canvas>
+            <StackPanel Height="142" Margin="-42,-50,-43,359" Background="Transparent"
+                        RenderTransformOrigin="0.5,0.5" Opacity="0.3">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="143.717"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+
+            </StackPanel>
+            <Grid>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+                    <Button Content="Add"  Command="{Binding AddStudentCommand}"  Style="{StaticResource FuncButton}"  Width="60"  Background="DarkGreen">
+                        <Button.Effect>
+                            <DropShadowEffect Color="#FFBEBDBD" ShadowDepth="2"/>
+                        </Button.Effect>
+                    </Button>
+                    <Button Content="Edit" Command="{Binding ExecuteEditStudentCommandCommand}"  Style="{StaticResource FuncButton}" Width="60" Background="YellowGreen">
+                        <Button.Effect>
+                            <DropShadowEffect Color="#FFBEBDBD" ShadowDepth="2"/>
+                        </Button.Effect>
+                    </Button>
+                    <Button Content="Delete" Command="{Binding DeleteCommand}"  Style="{StaticResource FuncButton}" Width="60"  Background="OliveDrab">
+                        <Button.Effect>
+                            <DropShadowEffect Color="#FFBEBDBD" ShadowDepth="2"/>
+                        </Button.Effect>
+                    </Button>
+                </StackPanel>
+            </Grid>
+
+
+        </Grid >
+    </Border>
+</Window>
